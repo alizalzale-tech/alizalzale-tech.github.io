@@ -656,7 +656,17 @@ h3 { margin: 0; font-weight: 600; font-size: 1.15rem; line-height: 1.35; }
   font-variation-settings: "opsz" 11;
 }
 .name { font-weight: 600; }
+
 .code-field {
   -webkit-mask-image: linear-gradient(transparent, #000 22%, #000 70%, transparent);
           mask-image: linear-gradient(transparent, #000 22%, #000 70%, transparent);
+}
+
+/* Night really looks like night: deeper colours and a dimmer glow */
+body[data-sky="night"] { --c1: #241d6b; --c2: #4b2687; --c3: #6e2a63; --c4: #123f5c; --accent: #c9a7ff; }
+body[data-sky="night"] .blob { opacity: .45; }
+body[data-sky="night"] .b3, body[data-sky="night"] .b4 { opacity: .3; }
+.blob { transition: background 2s var(--ease), opacity 2s var(--ease); }
+body[data-sky="night"] .name .italic {
+  background-image: linear-gradient(100deg, var(--paper) 10%, #e6b3ff 45%, #b9a2ff 70%, #ff9ab4);
 }
