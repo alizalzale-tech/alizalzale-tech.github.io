@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Zalzale – Web Developer</title>
+  <meta name="description" content="Ali Zalzale is a web development student in Ottawa who builds useful, well-made web apps.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff6f91'/><stop offset='.55' stop-color='%23b44fd6'/><stop offset='1' stop-color='%233b2fa0'/></linearGradient></defs><rect width='64' height='64' rx='18' fill='url(%23g)'/><text x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='34' font-style='italic' fill='%23fff'>az</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- The moving sky behind the top of the page. Its colours follow the time in Ottawa. -->
+  <div class="sky" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+  </div>
+
+  <!-- Floating languages and code snippets. script.js fills this in and moves them. -->
+  <div class="code-field" id="codeField" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Back to top">Ali Zalzale</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Say hello</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <p class="hello"><span id="greeting">Hello</span> from Ottawa, where it's <span id="clock">—</span>.</p>
+      <h1 class="name" aria-label="Ali Zalzale">
+        <span class="line"><span class="word">Ali</span></span>
+        <span class="line"><span class="word italic">Zalzale</span></span>
+      </h1>
+      <p class="typed" aria-live="polite">I <span id="typed">build web apps</span><span class="caret" aria-hidden="true"></span></p>
+      <p class="intro">
+        I'm a full-stack developer in Ottawa with hands-on experience in JavaScript, Python,
+        HTML, CSS, SQL and C#. I enjoy building web apps that are useful, well-made and easy to use, and I'm looking for a junior developer role or a chance to build something with a team.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#work">See my work</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <p class="sky-note" id="skyNote">The colours on this page follow the sky in Ottawa right now.</p>
+    </section>
+
+    <!-- ============ Moving skills ribbon ============ -->
+    <div class="ribbon" aria-label="Skills">
+      <div class="ribbon-track">
+        <span>JavaScript</span><span>Python</span><span>Flask</span><span>HTML</span><span>CSS</span>
+        <span>SQL</span><span>C#</span><span>REST APIs</span><span>pytest</span><span>Git</span>
+        <span>Linux</span><span>Raspberry Pi</span>
+        <span aria-hidden="true">JavaScript</span><span aria-hidden="true">Python</span><span aria-hidden="true">Flask</span><span aria-hidden="true">HTML</span><span aria-hidden="true">CSS</span>
+        <span aria-hidden="true">SQL</span><span aria-hidden="true">C#</span><span aria-hidden="true">REST APIs</span><span aria-hidden="true">pytest</span><span aria-hidden="true">Git</span>
+        <span aria-hidden="true">Linux</span><span aria-hidden="true">Raspberry Pi</span>
+      </div>
+      <div class="ribbon-track reverse code" aria-hidden="true">
+        <span>fetch("/api/weather")</span><span>def build_report(raw, place):</span><span>localStorage.setItem()</span>
+        <span>SELECT * FROM shifts;</span><span>@app.route("/api/search")</span><span>ctx.fillRect(x, y, w, h)</span>
+        <span>git push origin main</span><span>pytest -q</span>
+        <span>fetch("/api/weather")</span><span>def build_report(raw, place):</span><span>localStorage.setItem()</span>
+        <span>SELECT * FROM shifts;</span><span>@app.route("/api/search")</span><span>ctx.fillRect(x, y, w, h)</span>
+        <span>git push origin main</span><span>pytest -q</span>
+      </div>
+    </div>
+
+    <!-- ============ About ============ -->
+    <section class="section about" id="about">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">
+            I'm Ali, a full-stack developer from Ottawa. I'm studying Web Development and Internet
+            Applications at Algonquin College while working at the City of Ottawa with 6+ years of customer-facing experience, including a supervisory role.
+            
+          </p>
+          <p>
+           Skilled in JavaScript, Python, and SQL, with hands-on experience in Linux, Raspberry Pi, and
+            Microsoft Excel and SharePoint. 
+          </p>
+          <p>
+            Right now I'm looking for a junior developer role or a chance to build something useful
+            with a team.
+          </p>
+        </div>
+        <figure class="editor tilt">
+          <div class="editor-bar"><span></span><span></span><span></span><p>ali.js</p></div>
+<pre><code><span class="k">const</span> <span class="v">ali</span> = {
+  <span class="p">name</span>: <span class="s">"Ali Zalzale"</span>,
+  <span class="p">city</span>: <span class="s">"Ottawa, ON"</span>,
+  <span class="p">studying</span>: <span class="s">"Web Development"</span>,
+  <span class="p">school</span>: <span class="s">"Algonquin College"</span>,
+  <span class="p">graduating</span>: <span class="n">2027</span>,
+  <span class="p">job</span>: <span class="s">"CSR &amp; Supervisor, City of Ottawa"</span>,
+  <span class="p">favourite</span>: [<span class="s">"JavaScript"</span>, <span class="s">"Python"</span>],
+  <span class="p">openToWork</span>: <span class="k">true</span>,
+};</code></pre>
+          <figcaption class="sr-only">Ali is based in Ottawa, studies Web Development at Algonquin College, graduates in 2027, works as a Customer Service Representative and Supervisor at the City of Ottawa, and is open to junior developer roles.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ Projects ============ -->
+    <section class="section work" id="work">
+      <h2>Things I've built</h2>
+
+      <article class="project">
+        <a class="shot tilt" href="https://before-you-go-0r7w.onrender.com" target="_blank" rel="noopener" aria-label="Open Before You Go">
+          <img src="images/before-you-go.jpg" alt="Before You Go showing snow advice for Ottawa" loading="lazy" width="1360" height="960">
+        </a>
+        <div class="project-body">
+          <h3>Before You Go</h3>
+          <p class="tagline">A weather app that tells you what to wear.</p>
+          <p>
+            Search any city and get a plain-English answer: what to put on, what to bring, what to
+            watch out for, and the best time to head outside. A Python server turns live forecasts
+            into advice, and if the main weather service goes down it switches to a backup on its own.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Flask</li><li>JavaScript</li><li>REST APIs</li><li>pytest</li>
+          </ul>
+          <div class="links">
+            <a href="https://before-you-go-0r7w.onrender.com" target="_blank" rel="noopener">Open the live site</a>
+            <a href="https://github.com/alizalzale-tech/before-you-go" target="_blank" rel="noopener">Read the code</a>
+          </div>
+          <p class="note">Hosted on a free server, so the first load can take up to a minute.</p>
+        </div>
+      </article>
+
+      <article class="project flip">
+        <a class="shot tilt" href="https://alizalzale-tech.github.io/shifttracker/" target="_blank" rel="noopener" aria-label="Open ShiftTrack">
+          <img src="images/shifttrack.jpg" alt="ShiftTrack showing weekly hours, pay and a chart" loading="lazy" width="1200" height="900">
+        </a>
+        <div class="project-body">
+          <h3>ShiftTrack</h3>
+          <p class="tagline">Know your hours and your real take-home pay.</p>
+          <p>
+            Log your shifts and see hours, overtime and pay for the week, month and year. It works out
+            your paycheque after CPP, EI and income tax using 2026 Canadian rates, draws a chart of your
+            weeks, and saves everything in your browser.
+          </p>
+          <ul class="tags">
+            <li>JavaScript</li><li>HTML</li><li>CSS</li><li>Canvas API</li><li>localStorage</li>
+          </ul>
+          <div class="links">
+            <a href="https://alizalzale-tech.github.io/shifttracker/" target="_blank" rel="noopener">Open the live site</a>
+            <a href="https://github.com/alizalzale-tech/shifttracker" target="_blank" rel="noopener">Read the code</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section class="section experience" id="experience">
+      <h2>Where I've worked</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">2022 – now</p>
+          <div>
+            <h3>Customer Service Representative &amp; Supervisor</h3>
+            <p class="where">City of Ottawa</p>
+            <p>
+              I supervise front-line service, handle escalated complaints, train new staff, and
+              reconcile daily cash in Excel. I also redesigned office procedures so the team runs
+              smoother.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p class="when">2020 – 2022</p>
+          <div>
+            <h3>Cashier &amp; Cook</h3>
+            <p class="where">McDonald's</p>
+            <p>
+              Fast, accurate service at peak hours, food made to strict safety standards, and training
+              new crew members on the POS and store procedures.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p class="when">2019</p>
+          <div>
+            <h3>Volunteer Hockey Camp Counsellor</h3>
+            <p class="where">Carleton University &amp; Jim Durrell Recreation Centre</p>
+            <p>Helped coaches run drills and kept young players safe and organized on the ice.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ Skills & school ============ -->
+    <section class="section skills" id="skills">
+      <h2>What I work with</h2>
+      <div class="skill-grid">
+        <div>
+          <h3>Languages</h3>
+          <p>JavaScript, Python, SQL, C, C#, HTML, CSS</p>
+        </div>
+        <div>
+          <h3>Frameworks &amp; tools</h3>
+          <p>Flask, REST APIs, pytest, Git, GitHub, GitHub Pages, VS Code, Render</p>
+        </div>
+        <div>
+          <h3>Systems</h3>
+          <p>Linux command line, Raspberry Pi, Microsoft Excel and SharePoint</p>
+        </div>
+        <div>
+          <h3>People skills</h3>
+          <p>Training staff, resolving conflict, customer service, handling cash accurately</p>
+        </div>
+      </div>
+
+      <div class="school">
+        <div>
+          <h3>Algonquin College</h3>
+          <p>Web Development &amp; Internet Applications diploma, graduating August 2027.
+             Courses in C#, ASP.NET Core, PHP, databases, web security and networking.</p>
+        </div>
+        <div>
+          <h3>Carleton University</h3>
+          <p>Information Technology courses, 2022 – 2024, in information management, data
+             management, digital preservation and cataloguing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact" id="contact">
+      <h2>Let's build something.</h2>
+      <p>Hiring, have a project in mind, or just want to talk code? My inbox is open.</p>
+      <a class="email" href="mailto:alizalzale@hotmail.com">alizalzale@hotmail.com</a>
+      <div class="contact-links">
+        <button class="btn btn-ghost" id="copyEmail" type="button">Copy my email</button>
+        <a class="btn btn-ghost" href="https://github.com/alizalzale-tech" target="_blank" rel="noopener">GitHub</a>
+        <!-- Add when ready:
+        <a class="btn btn-ghost" href="https://linkedin.com/in/YOURNAME" target="_blank" rel="noopener">LinkedIn</a>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Ali Zalzale. Made in Ottawa.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
